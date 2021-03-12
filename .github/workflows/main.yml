@@ -10,10 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: "Checking latest version from geid-app/website repository..."
+        uses: actions/checkout@v2
+      - name: "Setting node environment..."
       - uses: actions/setup-node@v2.1.5
-          with:
-            node-version: ">=15.9.0"
+        with:
+          node-version: ">=15.9.0"
       - run: npm install
       - run: npm test
       - run: npm run deploy
