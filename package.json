@@ -1,7 +1,7 @@
 {
   "name": "geid-website",
   "version": "0.1.0",
-  "homepage": "https://geid.app",
+  "homepage": "https://geid-app.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
