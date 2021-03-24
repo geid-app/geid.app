@@ -15,7 +15,9 @@ jobs:
       - run: npm install
       - run: npm test
       - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v3
+      - uses: google-github-actions/setup-gcloud@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+      - run: gcloud app deploy --quiet
+          
