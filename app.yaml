@@ -1,4 +1,4 @@
-runtime: nodejs
+runtime: nodejs14
 handlers:
   - url: /static/js/(.*)
     static_files: build/static/js/\1
